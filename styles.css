@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffc0cb, #ffb6c1); /* Default pink gradient */
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    transition: background 1s ease-in-out; /* Smooth fade-in transition */
+}
+
+body.with-background {
+    background: url('z.png') no-repeat center center fixed;
+    background-size: contain; /* Makes the image fit inside the container without zooming in */
+    background-color: rgba(255, 192, 203, 0.5); /* Semi-transparent pink overlay */
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container, .message-content {
+    text-align: center;
+    background: rgba(255, 228, 233, 0.9); /* Light pink semi-transparent container */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+    z-index: 1; /* Places the container above the overlay */
+    position: relative;
+    max-width: 600px;
+}
+
+h1 {
+    color: #ff1493;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff69b4;
+    border-radius: 5px;
+    margin-top: 10px;
+    outline: none;
+    transition: 0.3s;
+    width: 80%;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff1493;
+}
+
+.hidden {
+    display: none;
+}
+
+.message-content p, .message-content ul {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.welcome-message h2 {
+    font-size: 3rem; /* Large font size for the welcome message */
+    color: #ff1493;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
